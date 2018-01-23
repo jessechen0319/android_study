@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Linear Layout</string>
     <string name="hello">Hello world</string>
+    <string name="input_prompt">please input your name</string>
 </resources>
