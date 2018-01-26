@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">session2_view_component</string>
+    <string-array name="xingqiu">
+        <item>地球</item>
+        <item>火星</item>
+        <item>土星</item>
+    </string-array>
 </resources>
