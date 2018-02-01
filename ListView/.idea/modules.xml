@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ListView.iml" filepath="$PROJECT_DIR$/ListView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\workspace\innovation\android\ListView\ListView.iml" filepath="C:\workspace\innovation\android\ListView\ListView.iml" />
+      <module fileurl="file://C:\workspace\innovation\android\ListView\app\app.iml" filepath="C:\workspace\innovation\android\ListView\app\app.iml" />
     </modules>
   </component>
 </project>
