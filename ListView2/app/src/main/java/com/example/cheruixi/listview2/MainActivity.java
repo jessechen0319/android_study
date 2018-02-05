@@ -32,4 +32,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SimpleAdapterDemo.class);
         startActivity(intent);
     }
+
+    public void demoBase(View view){
+        Intent intent = new Intent(this, BaseAdapterDemo.class);
+        startActivity(intent);
+    }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cheruixi.listview2">
+    package="com.example.cheruixi.gradeview">
 
     <application
         android:allowBackup="true"
@@ -16,11 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Simple" />
-        <activity android:name=".ArrayAdapterDemo" />
-        <activity android:name=".AddHeader" />
-        <activity android:name=".SimpleAdapterDemo" />
-        <activity android:name=".BaseAdapterDemo"></activity>
     </application>
 
 </manifest>
