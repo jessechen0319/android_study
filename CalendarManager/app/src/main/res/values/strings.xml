@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">瑞祥任务管家</string>
+    <string name="app_name">任务管家</string>
     <string name="add_new_task">新建任务</string>
     <string name="unkown_time">未知时间</string>
     <string name="now_number">当前任务总数：</string>
