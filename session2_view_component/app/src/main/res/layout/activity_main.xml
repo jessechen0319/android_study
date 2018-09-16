@@ -16,5 +16,33 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/xingqiu"
         android:layout_marginTop="10dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="jesse"
+        android:layout_below="@id/xiaomei"
+        android:onClick="clickButton"
+        android:id="@+id/button1"
+
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_below="@id/button1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/jesseId"
+            android:text="Jesse"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stevenId"
+            android:text="Steven"/>
+
+
+    </RadioGroup>
 
 </RelativeLayout>
