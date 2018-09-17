@@ -6,13 +6,14 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_weight="2"
-        android:background="@color/button_color"
+
         android:layout_height="match_parent">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="新建任务"
             android:textSize="20dp"
+            android:textColor="@color/black"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:id="@+id/task_title"
@@ -21,6 +22,7 @@
             android:layout_width="match_parent"
             android:textSize="15dp"
             android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
             android:id="@+id/task_desc"
             android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
@@ -30,16 +32,26 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_weight="5"
-        android:background="@color/colorPrimary"
+        android:gravity="center"
         android:layout_height="match_parent">
-
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/yellow"
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_weight="4"
-        android:background="@color/background"
+        android:gravity="center"
         android:layout_height="match_parent">
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finish"
+            />
     </LinearLayout>
 </LinearLayout>
