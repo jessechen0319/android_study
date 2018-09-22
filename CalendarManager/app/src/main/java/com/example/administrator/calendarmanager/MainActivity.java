@@ -2,6 +2,8 @@ package com.example.administrator.calendarmanager;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -18,7 +20,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static ArrayList<Map<String, String>> tasks = new ArrayList<>();
+    public static ArrayList<HashMap<String, String>> tasks = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
 
         /*列表模板{*/
 
-        Map<String, String> task1 = new HashMap<>();
+        HashMap<String, String> task1 = new HashMap<>();
         task1.put("title","灵修");
         task1.put("content", "中午看完每日灵粮");
         task1.put("status", TaskStatus.NEW);
         tasks.add(task1);
 
-        Map<String, String> task2 = new HashMap<>();
+        HashMap<String, String> task2 = new HashMap<>();
         task2.put("title","看书");
         task2.put("content", "看完几页书");
         task2.put("status", TaskStatus.FINISHED);
@@ -48,14 +50,17 @@ public class MainActivity extends AppCompatActivity {
 
         /*}列表模板*/
 
-        SimpleAdapter adapter = new SimpleAdapter(MainActivity.this,
-                tasks,
-                R.layout.tasks,
-                new String[]{"title", "content"},
-                new int[]{R.id.task_title, R.id.task_desc});
-        ListView listView = findViewById(R.id.tasks);
-        listView.setAdapter(adapter);
-
+//        SimpleAdapter adapter = new SimpleAdapter(MainActivity.this,
+//                tasks,
+//                R.layout.tasks,
+//                new String[]{"title", "content"},
+//                new int[]{R.id.task_title, R.id.task_desc});
+//        ListView listView = findViewById(R.id.tasks);
+//        listView.setAdapter(adapter);
+        RecyclerView recyclerView = findViewById(R.id.tasks);
+        TasksRecycleViewAdapter adapter = new TasksRecycleViewAdapter(this, tasks);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         refreshView();
 
     }
@@ -66,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         super.setContentView(view);
     }
 
-    private void refreshView(){
+    public void refreshView(){
         /*设置时间*/
         SimpleDateFormat aDate=new SimpleDateFormat("yyyy-MM-dd");
         long now=System.currentTimeMillis();
@@ -87,5 +92,8 @@ public class MainActivity extends AppCompatActivity {
         }
         TextView uncompleteTasks = findViewById(R.id.uncompleteTasks);
         uncompleteTasks.setText(String.valueOf(uncompleteTask));
+
+        //refresh
+
     }
 }

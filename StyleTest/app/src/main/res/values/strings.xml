@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StyleTest</string>
+    <string name="textView">文字</string>
+</resources>
