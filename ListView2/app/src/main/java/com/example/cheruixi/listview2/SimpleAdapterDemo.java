@@ -44,4 +44,6 @@ public class SimpleAdapterDemo extends AppCompatActivity {
         listView.setAdapter(adapter);
 
     }
+
+
 }

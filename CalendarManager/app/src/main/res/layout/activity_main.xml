@@ -38,6 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/appname"
                     android:layout_marginTop="10dp"
+                    android:id="@+id/current_date"
                     android:layout_centerHorizontal="true"
                     android:text="@string/unkown_time"
                     />
@@ -51,19 +52,43 @@
                     android:paddingRight="20dp"
                     android:background="@drawable/shape"
                     />
-                <TextView
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_above="@+id/tasks_linear"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_finished"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/uncompleteTasks"/>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/not_finished"
-                    android:layout_above="@+id/totalTask"
-                    android:layout_marginBottom="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:text="@string/now_number"
-                    android:id="@+id/totalTask"
-                    android:layout_alignParentBottom="true"/>
+                    android:id="@+id/tasks_linear"
+                    android:layout_alignParentBottom="true"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/now_number"
+                        android:id="@+id/totalTask"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/totalTask_display"
+                        android:minWidth="30dp"
+                        />
+                </LinearLayout>
 
             </RelativeLayout>
         </LinearLayout>
